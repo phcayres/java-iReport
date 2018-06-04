@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DependentesPorFuncionario" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72ab04df-6951-46f6-bd54-a8f5714b81b0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\paulo983\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SSN_EMP" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$F{ssn}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT e.ssn, concat(e.pnome, ' ' ,e.unome) as nome
+FROM empregado e
+ORDER BY nome]]>
+	</queryString>
+	<field name="ssn" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band/>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="314bfb68-2436-454a-8eb1-26424c4a0eec" style="Title" x="0" y="4" width="553" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Dependentes por empregado]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<line>
+				<reportElement uuid="1d34fa3e-b1cd-453d-a9b2-ed3c338e3fd6" style="Column header" x="0" y="0" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="f59f6dc4-1b3a-4692-86cc-977a5ad92986" style="Detail" x="0" y="5" width="555" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Funcioário: "+$F{nome}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement uuid="076cc0b6-b879-4315-a5ab-f9c2b17ee99f" x="0" y="26" width="553" height="21"/>
+				<subreportParameter name="SSN_EMP">
+					<subreportParameterExpression><![CDATA[$F{ssn}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"SubDetailDependentesPorFuncionario.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="bce136b5-783f-4a55-9f99-1127af1faef2" positionType="FixRelativeToBottom" x="0" y="44" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="53cfabdb-90a0-4bb9-be16-e866b5212e13" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="61219c3b-982b-498f-8768-ea1a4cd360bb" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="0fede85a-b41f-4b55-a8bb-37c63a13d108" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

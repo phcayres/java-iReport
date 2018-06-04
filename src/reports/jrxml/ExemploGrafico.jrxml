@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExemploGrafico" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d787a5e7-2126-4df3-afdb-aea575d1e0f5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT e.dno, d.dnome, AVG(e.salario) as media
+FROM departamento d
+INNER JOIN empregado e ON e.dno = d.dnumero
+GROUP BY e.dno, d.dnome;]]>
+	</queryString>
+	<field name="dnome" class="java.lang.String"/>
+	<field name="media" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4d241e6c-6c70-4eaf-813a-f7e3bee62aa3" x="0" y="0" width="802" height="79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="40"/>
+				</textElement>
+				<text><![CDATA[Média Salarial por Departamento]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="46e56759-5e59-44e6-9bcc-2cfe07f01b2d" stretchType="RelativeToBandHeight" x="0" y="72" width="802" height="1"/>
+			</line>
+		</band>
+	</title>
+	<summary>
+		<band height="200" splitType="Stretch">
+			<pieChart>
+				<chart>
+					<reportElement uuid="dbfac76a-31b9-4982-a4bc-32b4427a8865" x="0" y="0" width="802" height="200"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{dnome}]]></keyExpression>
+					<valueExpression><![CDATA[$F{media}]]></valueExpression>
+					<labelExpression><![CDATA[new DecimalFormat("#,##0.00").format($F{media}).toString()]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>

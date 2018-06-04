@@ -1,0 +1,36 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package visao;
+
+import controle.GeraRelatorio;
+import java.util.HashMap;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
+
+/**
+ *
+ * @author Paulo Henrique Cayres
+ */
+public class iReportComPassagemDeParametros {
+
+    public static void main(String[] args) throws Exception {
+        GeraRelatorio geraRelat = new GeraRelatorio();
+        
+        JasperPrint relatorio;
+        try {
+            HashMap map = new HashMap();
+            map.put("salarioini", new Double(javax.swing.JOptionPane.showInputDialog("Salário inicial:")));
+            map.put("salariofim", new Double(javax.swing.JOptionPane.showInputDialog("Salário Final:")));
+            relatorio = geraRelat.gerarRelatorio("src/reports/RelatorioEmpregadosComParametros.jasper", map);
+            JasperViewer.viewReport(relatorio, false);
+        } catch (NumberFormatException | JRException e) {
+            javax.swing.JOptionPane.showMessageDialog(null, "Erro: " + e.getMessage());
+        }	
+        
+    }    
+    
+}
+
