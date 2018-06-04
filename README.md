@@ -8,10 +8,10 @@ Este pacote contém exemplos de relatórios Jasper (.jrxml) rodando dentro de um
 ## Sobre o Projeto
 Este projeto contém relatórios Jasper construídos utilizando o JasperSoft Studio.
 
-* Todos os arquivos fontes (.jrxml) estão dentro do pacote reports.jrxml
-* Os arquivos compilados (.jasper) então dentro do pacote reports
-* O script do bando de dados do projeto encontra-se no pacote sql. Consulte e atualize o arquivo bancoDeDados.properties dentro do pacote util para correta configuração de acesso ao banco de dados.
-* No pacote visao estão os códigos java que executam cada um dos relatórios deste projeto
+* Todos os arquivos fontes (.jrxml) estão dentro do pacote **reports.jrxml**
+* Os arquivos compilados (.jasper) então dentro do pacote **reports**
+* O script do bando de dados do projeto encontra-se no pacote **sql**. Consulte e atualize o arquivo **bancoDeDados.properties** dentro do pacote util para correta configuração de acesso ao banco de dados.
+* No pacote **visao** estão os códigos java que executam cada um dos relatórios deste projeto
 
 ## Dúvidas?
 
