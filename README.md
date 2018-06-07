@@ -15,7 +15,7 @@ All source files (.jrxml) are included in the package **/reports.jrxml**
 
 ## Issues
 
-Open an [Issue](https://github.com/phcayres/ljasper/issues), or search for older on.
+Open an [Issue](https://github.com/phcayres/java-iReport/issues), or search for older on.
 
 ##
 
