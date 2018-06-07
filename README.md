@@ -1,6 +1,6 @@
 # java-iReport
 
-Reporting using Jasper on Java - NetBeans project
+Reports using Jasper on Java - NetBeans project
 
 ## Getting Started
 The package contains examples of Jasper reports (.jrxml) running inside a NetBeans project and PostgreSQL database.
