@@ -6,7 +6,7 @@ Reports using Jasper on Java - NetBeans project
 The package contains examples of Jasper reports (.jrxml) running inside a NetBeans project and PostgreSQL database.
 
 ## About the project
-This project contains Jasper applications built using JasperSoft Studio.
+This project contains Jasper reports built using JasperSoft Studio.
 
 All source files (.jrxml) are included in the package **/reports.jrxml**
 * The compiled files (.jasper) then inside the package **/reports**
