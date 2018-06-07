@@ -1,22 +1,22 @@
 # java-iReport
 
-Relatórios com Jasper - projeto NetBeans
+Reporting using Jasper on Java - NetBeans project
 
-## Introdução
-Este pacote contém exemplos de relatórios Jasper (.jrxml) rodando dentro de um projeto NetBeans e banco de dados PostgreSQL. 
+## Getting Started
+The package contains examples of Jasper reports (.jrxml) running inside a NetBeans project and PostgreSQL database.
 
-## Sobre o Projeto
-Este projeto contém relatórios Jasper construídos utilizando o JasperSoft Studio.
+## About the project
+This project contains Jasper applications built using JasperSoft Studio.
 
-* Todos os arquivos fontes (.jrxml) estão dentro do pacote **reports.jrxml**
-* Os arquivos compilados (.jasper) então dentro do pacote **reports**
-* O script do bando de dados do projeto encontra-se no pacote **sql**. Consulte e atualize o arquivo **bancoDeDados.properties** dentro do pacote util para correta configuração de acesso ao banco de dados.
-* No pacote **visao** estão os códigos java que executam cada um dos relatórios deste projeto
+All source files (.jrxml) are included in the package ** \reports.jrxml **
+* The compiled files (.jasper) then inside the package ** \reports **
+* The data file script is in the ** \sql ** package. Refer to and update the ** \database.properties ** file within the data package to configure the database access.
+* In package ** view ** is in java code that execute each of your gift data
 
-## Dúvidas?
+## Issues
 
-Abra uma [Issue](https://github.com/phcayres/java-iReport/issues), ou pesquise por Issues antigas.
+Open a [issue] (https://github.com/phcayres/java-iReport/issues), or search for older on.
 
-## Licença
+##
 
 MIT
