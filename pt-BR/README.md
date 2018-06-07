@@ -15,7 +15,7 @@ Este projeto contém relatórios Jasper construídos utilizando o JasperSoft Stu
 
 ## Dúvidas?
 
-Abra uma [Issue](https://github.com/phcayres/java-iReport/issues), ou pesquise por Issues antigas.
+Abra uma [nova](https://github.com/phcayres/java-iReport/issues), ou pesquise por dúvidas antigas.
 
 ## Licença
 
