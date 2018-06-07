@@ -8,10 +8,10 @@ The package contains examples of Jasper reports (.jrxml) running inside a NetBea
 ## About the project
 This project contains Jasper reports built using JasperSoft Studio.
 
-All source files (.jrxml) are included in the package **/reports.jrxml**
-* The compiled files (.jasper) then inside the package **/reports**
-* The data file script is inside the **/sql** package. Refer to and update the **database.properties** file inside the **/data** package to configure the database access.
-* In package **/view** you'll find all java code examples to built jasper reports.
+All source files (.jrxml) are available in the package **/reports.jrxml**
+* The compiled files (.jasper) are available in the package **/reports**
+* The data file script is available the **/sql** package. Refer to and update the **database.properties** file inside the **/data** package to configure the database access.
+* Inside the package **/view** you'll find all java code examples to built jasper reports. Run each on using SHIFT+F6.
 
 ## Issues
 
