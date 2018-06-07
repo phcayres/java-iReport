@@ -17,6 +17,6 @@ All source files (.jrxml) are available in the package **/reports.jrxml**
 
 Open an [Issue](https://github.com/phcayres/java-iReport/issues), or search for older on.
 
-##
+## Licence
 
 MIT
