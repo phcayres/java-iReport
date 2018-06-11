@@ -10,8 +10,8 @@ This project contains Jasper reports built using JasperSoft Studio.
 
 All source files (.jrxml) are available in the **/reports.jrxml** package
 * The compiled files (.jasper) are available in the **/reports** package
-* The data file script is available the **/sql** package. Refer to and update the **database.properties** file inside the **/data** package to configure the database access.
-* Inside the **/view** package you'll find all java code examples to built jasper reports. Run each on using SHIFT+F6.
+* The data file script is available on **/sql** package. Refer to and update the **database.properties** file inside the **/data** package to configure the database access.
+* Inside **/view** package you'll find all java code examples to built jasper reports. Run each on using SHIFT+F6.
 
 ## Issues
 
